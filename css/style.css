@@ -41,7 +41,7 @@
   background-color: var(--brand-color);
 }
 
-.main-title {
+.main-text {
   font-size: 30px;
   font-weight: bolder;
   color: #fff;
@@ -50,4 +50,24 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    padding: 0 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 20px 0;
+  }
+
+  .menu {
+    margin-bottom: 0;
+  }
+
+  .main-text {
+    font-size: 40px;
+  }
 }
