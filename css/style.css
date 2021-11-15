@@ -7,7 +7,7 @@
 }
 
 .header {
-  /* background-color: wheat;*/
+  background-color: #fff;
   position: fixed;
   width: 100%;
   display: flex;
@@ -23,15 +23,31 @@
 .menu {
   list-style: none;
   margin-bottom: 13px;
-  /* background-color: teal;*/
 }
 
 .menu-item {
   display: inline;
   font-size: 16px;
   text-transform: uppercase;
+  color: #4a4a4a;
 }
 
 .item-contact {
   margin-left: 20px;
+}
+
+.main {
+  height: 100vh;
+  background-color: var(--brand-color);
+}
+
+.main-title {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
