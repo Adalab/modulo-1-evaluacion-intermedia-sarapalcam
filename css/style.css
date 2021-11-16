@@ -16,24 +16,28 @@
 }
 
 .logo {
-  width: 155px; /* Esta propiedad la podría haber eliminado porque la imagen ya tiene ese ancho */
   margin: 10px 0;
 }
 
 .menu {
   list-style: none;
   margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu-item {
-  display: inline;
   font-size: 16px;
   text-transform: uppercase;
   color: #4a4a4a;
 }
 
-.item-contact {
-  margin-left: 20px; /* En menús es mejor poner padding porque se agranda el área donde se puede hacer click y mejora la experiencia de usuario. Además habría sido más correcto hacer un display flex en .menu y después haber dado padding a los .menu-items */
+.menu-item-blog {
+  padding-right: 10px;
+}
+
+.menu-item-contact {
+  padding-left: 10px;
 }
 
 .main {
@@ -41,17 +45,17 @@
   background-color: var(--brand-color);
 }
 
-/* Como tendría que haber sido un h1, para que se distribuyese el texto en 3 filas tendría que haber dado word-spacing:100vw */
-.main-text {
+.main-title {
+  word-spacing: 100vw;
   font-size: 30px;
   font-weight: 800;
   color: #fff;
-  position: absolute; /* Habría sido más sencillo con display:flex, justify-content:center y align-item:center en el main */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  /* En el html debe ir en minúsculas todo y añadir aquí text-transform:capitalize */
+  text-transform: capitalize;
 }
 
 @media all and (min-width: 768px) {
@@ -69,7 +73,7 @@
     margin-bottom: 0;
   }
 
-  .main-text {
+  .main-title {
     font-size: 40px;
   }
 }

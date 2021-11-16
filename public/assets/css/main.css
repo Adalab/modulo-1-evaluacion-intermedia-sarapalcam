@@ -1,0 +1,73 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  text-decoration: none; }
+
+* {
+  font-family: "Rubik", sans-serif; }
+
+:root {
+  --brand-color: #3cdbc0; }
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.logo {
+  width: 155px;
+  /* Esta propiedad la podría haber eliminado porque la imagen ya tiene ese ancho */
+  margin: 10px 0; }
+
+.menu {
+  list-style: none;
+  margin-bottom: 13px; }
+
+.menu-item {
+  display: inline;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #4a4a4a; }
+
+.item-contact {
+  margin-left: 20px;
+  /* En menús es mejor poner padding porque se agranda el área donde se puede hacer click y mejora la experiencia de usuario. Además habría sido más correcto hacer un display flex en .menu y después haber dado padding a los .menu-items */ }
+
+.main {
+  height: 100vh;
+  background-color: var(--brand-color); }
+
+/* Como tendría que haber sido un h1, para que se distribuyese el texto en 3 filas tendría que haber dado word-spacing:100vw */
+.main-text {
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  position: absolute;
+  /* Habría sido más sencillo con display:flex, justify-content:center y align-item:center en el main */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* En el html debe ir en minúsculas todo y añadir aquí text-transform:capitalize */ }
+
+@media all and (min-width: 768px) {
+  .header {
+    padding: 0 30px;
+    flex-direction: row;
+    justify-content: space-between; }
+  .logo {
+    margin: 20px 0; }
+  .menu {
+    margin-bottom: 0; }
+  .main-text {
+    font-size: 40px; } }
+
+/*# sourceMappingURL=main.css.map */
